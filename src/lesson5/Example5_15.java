@@ -27,8 +27,8 @@ class China{
 public class Example5_15{
     public static void main(String args[]){
         China china=new China();
-        china.f();
-        china.dalian.g();
+        china.f(); //我是大连,z=0:黑土地
+        china.dalian.g(); //我是大连,z=20:黑土地
     }
 }
 

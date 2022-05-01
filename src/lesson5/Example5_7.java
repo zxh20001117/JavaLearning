@@ -29,8 +29,8 @@ public class Example5_7{
         long resultOne=b.g();
         long resultTwo=b.f();
         long resultThree=b.g();
-        System.out.println("resultOne="+resultOne);
-        System.out.println("resultTwo="+resultTwo);
-        System.out.println("resultThree="+resultThree);
+        System.out.println("resultOne="+resultOne);//0
+        System.out.println("resultTwo="+resultTwo);//40
+        System.out.println("resultThree="+resultThree);//15
     }
 }

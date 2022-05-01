@@ -28,8 +28,8 @@ class B6 extends A6{
 public class Example5_6{
     public static void main(String args[]){
         B6 b1=new B6(10,20);
-        b1.f();
-        B6 b2=new B6();
+        b1.f(); //x=10,y=20,z=300
+        B6 b2=new B6(); //x=100,y=200,z=800
         b2.f();
     }
 }
