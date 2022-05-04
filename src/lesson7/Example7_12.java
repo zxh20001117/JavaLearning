@@ -28,7 +28,7 @@ public class Example7_12{
             System.out.printf("%d,",te);
         }
 
-        System.out.println("\nB集合有"+A.size()+"个元素:");
+        System.out.println("\nB集合有"+B.size()+"个元素:");
         iter=B.iterator();
         while(iter.hasNext()){
             Integer te=iter.next();
