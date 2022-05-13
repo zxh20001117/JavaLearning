@@ -1,6 +1,7 @@
 package lesson9;
 
 
+
 import java.net.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -8,7 +9,7 @@ import javax.swing.*;
 public class A extends JFrame implements Runnable,ActionListener{
     JTextField outMessage=new JTextField(12);
     JTextArea inMessage=new JTextArea(12,20);
-    JButton b=new JButton("·¢ËÍÊı¾İ");
+    JButton b=new JButton("å‘é€æ•°æ®");
     A(){
         super("I AM A");
         setSize(320,200);
@@ -23,9 +24,9 @@ public class A extends JFrame implements Runnable,ActionListener{
         Thread thread=new Thread(this);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         validate();
-        thread.start();                                //Ïß³Ì¸ºÔğ½ÓÊÕÊı¾İ
+        thread.start();                                //çº¿ç¨‹è´Ÿè´£æ¥æ”¶æ•°æ®
     }
-    public void actionPerformed(ActionEvent event){     //µ¥»÷°´Å¥·¢ËÍÊı¾İ
+    public void actionPerformed(ActionEvent event){     //å•å‡»æŒ‰é’®å‘é€æ•°æ®
         byte b[]=outMessage.getText().trim().getBytes();
         try{   InetAddress address=InetAddress.getByName("127.0.0.1");
             DatagramPacket data=new DatagramPacket(b,b.length,address,1234);
@@ -34,7 +35,7 @@ public class A extends JFrame implements Runnable,ActionListener{
         }
         catch(Exception e){}
     }
-    public void run(){                                //½ÓÊÕÊı¾İ
+    public void run(){                                //æ¥æ”¶æ•°æ®
         DatagramPacket pack=null;
         DatagramSocket mail=null;
         byte b[]=new byte[8192];
@@ -45,8 +46,8 @@ public class A extends JFrame implements Runnable,ActionListener{
         while(true){
             try{  mail.receive(pack);
                 String message=new String(pack.getData(),0,pack.getLength());
-                inMessage.append("ÊÕµ½Êı¾İÀ´×Ô£º"+pack.getAddress());
-                inMessage.append("\nÊÕµ½Êı¾İÊÇ£º"+message+"\n");
+                inMessage.append("æ”¶åˆ°æ•°æ®æ¥è‡ªï¼š"+pack.getAddress());
+                inMessage.append("\næ”¶åˆ°æ•°æ®æ˜¯ï¼š"+message+"\n");
                 inMessage.setCaretPosition(inMessage.getText().length());
             }
             catch(Exception e){}
